@@ -44,16 +44,6 @@ body {
   cursor: default;
 }
 
-.section {
-  padding: 50px;
-  text-align: center;
-  margin: auto;
-}
-
-.section__container {
-  max-width: 1200px;
-}
-
 a {
   text-decoration: none;
   color: var(--color-white);
@@ -70,6 +60,19 @@ button {
   outline: none;
   cursor: pointer;
 }
+
+/* Section common */
+.section {
+  padding: 50px;
+  text-align: center;
+  margin: auto;
+}
+
+.section__container {
+  max-width: 1200px;
+  margin: auto;
+}
+
 
 /* Typography */
 h1 {
