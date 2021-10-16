@@ -434,12 +434,17 @@ h3 {
 
 #contact .contact__title,
 #contact .contact__email, 
+#contact .contact__address,
 #contact .contact__rights {
   color: var(--color-white);
 }
 
 #contact .contact__title {
   margin: 32px 0;
+}
+
+#contact .contact__address{
+  font-size: var(--font-large);
 }
 
 #contact .contact__links {
@@ -454,6 +459,11 @@ h3 {
 #contact .contact__links i:hover {
   transform: scale(1.1);
   color: var(--color-yellow);
+}
+
+#contact .root_daum_roughmap.root_daum_roughmap_landing {
+  margin: auto;
+  margin-top: 32px;
 }
 
 /* For below 768px screee width */
