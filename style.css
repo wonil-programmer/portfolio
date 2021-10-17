@@ -27,7 +27,7 @@
   --weight-regular: 400;
 
   /* Size */
-  --size-boreder-radius: 4px;
+  --size-border-radius: 4px;
 
   /* Animation duration */
   --animation-duration: 300ms;
@@ -101,10 +101,10 @@ h3 {
   position: fixed;
   width: 100%;
   display: flex;
+  color: var(--color-white);
   justify-content: space-between;
   background-color: transparent;
   align-items: center;
-  color: var(--color-white);
   padding: 16px;
   transition: all var(--animation-duration) ease-in-out;
   z-index: 1;
@@ -127,16 +127,13 @@ h3 {
   padding: 8px 12px;
   margin: 0 4px;
   cursor: pointer;
-  border-radius: var(--size-boreder-radius);
-}
-
-#navbar .navbar__menu__item.active {
-  border: 1px solid var(--color-white);
-  border-radius: var(--size-boreder-radius);
+  border: 1px solid transparent;
+  border-radius: var(--size-border-radius);
 }
 
 #navbar .navbar__menu__item:hover {
   background-color: var(--color-dark-pink);
+  border-color: var(--color-white);
 }
 
 #navbar .navbar__toggle-btn {
@@ -175,6 +172,10 @@ h3 {
   padding: 8px 12px;
   border: 2px solid var(--color-white); 
   border-radius: 4px;
+}
+
+#home .home__contact:hover {
+  background-color: var(--color-dark-pink);
 }
 
 /* About */
@@ -294,12 +295,12 @@ h3 {
 
 #work .work__categories .category__btn {
   border: 1px solid var(--color-dark-white);
-  border-radius: var(--size-boreder-radius);
+  border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
 }
 
-#work .work__categories .category__btn.active,
+#work .work__categories .category__btn.selected,
 #work .work__categories .category__btn:hover {
   background-color: var(--color-pink);
   color: var(--color-white);
@@ -320,7 +321,7 @@ h3 {
   transition: all var(--animation-duration) ease-in;
 }
 
-#work .work__categories .category__btn.active .category__count ,
+#work .work__categories .category__btn.selected .category__count ,
 #work .work__categories .category__btn:hover .category__count {
   opacity: 1;
   top: 0;
@@ -330,8 +331,14 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
 }
 
+#work .work__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
+}
 #work .work__projects .project {
   display: flex;
   justify-content: center;
@@ -341,6 +348,10 @@ h3 {
   height: 250px;
   margin: 2px;
   background-color: var(--color-light-white);
+}
+
+#work .work__projects .project.invisible {
+  display: none;
 }
 
 #work .work__projects .project .project__img {
@@ -416,7 +427,7 @@ h3 {
 #testimonials .testimonial .testimonial__speech-bubble {
   padding: 18px;
   background-color: var(--color-white);
-  border-radius: var(--size-boreder-radius);
+  border-radius: var(--size-border-radius);
 }
 
 #testimonials .testimonial__speech-bubble p {
